@@ -443,6 +443,7 @@ body {
     left: 0;
     width: 100%;
     background: inherit;
+    z-index: 1;
 }
 
 .header a {
@@ -606,6 +607,128 @@ body {
 /*----------------------------------------------------------------
     CSS INTRO END
 */
+
+
+/*----------------------------------------------------------------
+    CSS TRANSITIONS START
+*/
+
+.transitions {
+    height: 560px;
+    position: relative;
+}
+
+.transitions_background {
+
+    background: #393F47;
+    height: 100%;
+    z-index: 3;
+}
+
+.transition_back-rectangle {
+    margin: 0 auto;
+    margin-top: -560px;
+    height: 100%;
+    width: 421px;
+    z-index: 2;
+    background-color: #2F343A;
+}
+
+.transition_field {
+    margin-top: -560px;
+    height: 560px;
+    z-index: 1;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.transition_board {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.transition_info {
+    width: 445px;
+}
+
+.transition_h2{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.transition_h2::before {
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 6px;
+    background: #C8A35F;
+    margin-bottom: 40px;
+    ;
+}
+
+.transition_text {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 50px;
+}
+
+.transition_more {
+    display: block;
+    width: 220px;
+    height: 55px;
+    background: #C8A35F;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 16px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+
+.transition_more:hover, .transition_more:active, .transition_more:focus {
+    box-shadow: 0 0 15px rgb(39, 39, 39);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -o-transform: scale(1.07);
+}
+
+.transition_pic-down {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.transition_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.transitions_next {
+    display: block;
+}
+
+
+/*----------------------------------------------------------------
+    CSS TRANSITIONS END
+*/
+
+
 
 /*----------------------------------------------------------------
     CSS SERVICE START
