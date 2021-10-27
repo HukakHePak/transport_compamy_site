@@ -418,14 +418,6 @@ html {
   box-sizing: inherit;
 }
 
-/*----------------------------------------------------------------
-    DOCUMENT CSS FINISH
-*/
-
-
-/*----------------------------------------------------------------
-    CSS BODY START
-*/
 body {
     font-family: 'Roboto';
     font-style: normal;
@@ -436,32 +428,61 @@ body {
     background-color: #2F343A;
 }
 
+/*----------------------------------------------------------------
+    DOCUMENT CSS FINISH
+*/
+
+
+/*----------------------------------------------------------------
+    CSS HEADER START
+*/
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: inherit;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.header a:hover, .header a:active, .header a:focus{
+    opacity: .70;
+}
+
 .wrapper {
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.header_info {
-    background: #C8A35F;
-    height: 45px;
-    margin-bottom: 27px;
-}
-
-.header{
-    position: fixed;   
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.header_company_wrapper {
+.header_wrapper, .header_logo {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 
-.header_list {
+.info_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header_info {
+    background: #C8A35F;
+    height: 45px;
+    padding: 16px;
+}
+
+.header_company {
+    padding: 27px;
+}
+
+.header_list, .language_list {
     display: flex;
     flex-wrap: wrap;
 }
@@ -475,21 +496,8 @@ body {
 }
 
 .header_link {
-    line-height: 16px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: white;
-    text-decoration: none;
-}
-
-.header_link:hover, .header_link:focus, .header_link:active {
-    opacity: .70;
-}
-
-.header_logo {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
 }
 
 .header_logo_link {
@@ -498,6 +506,111 @@ body {
     border-right: 1px solid #F2F2F2;
 }
 
-.header_offise_link {
-    background-image: url(/images/gitп ) top left no-repeat;
+.header_office_link {
+    background: url(/images/location-point.svg) no-repeat left;
+    height: 25px;
+    padding-top: 5px;  
+    padding-left: 35px;
+    font-size: 14px;
+    letter-spacing: 0.05em; 
+}
+
+.language_nav {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.language_item {
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.language_item:last-child {
+    margin: 0;
+}
+
+.language_link, .header_phone, .header_mail {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.language_item a {
+    opacity: .70;
+}
+
+.language_item:first-child a{
+    opacity: 1;
+}
+
+.header .header_logo a {
+    opacity: 1;
+}
+
+/*----------------------------------------------------------------
+    CSS HEADER FINISH
+*/
+
+/*----------------------------------------------------------------
+    CSS INTRO START
+*/
+
+.intro {
+    margin-top: 145px;
+    min-height: 620px;
+    background: url("/images/truck.png") no-repeat center;
+    background-size: cover;
+    padding-top: 155px;
+}
+
+.intro_block {
+    margin: 0 auto;
+    max-width: 920px;
+    height: 245px;
+    border: 1px solid #C8A35F;
+    box-sizing: border-box;
+    padding-top: 45px;
+    margin-bottom: 140px;
+}
+
+.intro_wrapper {
+    width: 777px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro_h1 { 
+    font-weight: bold;
+    font-size: 64px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    height: 59px;
+    margin-bottom: 45px;
+}
+
+.intro_text {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.mouse_link {
+    display: block;
+    width: 30px;
+    margin: 0 auto;
+}
+
+.mouse_link:hover, .mouse_link:active, .mouse_link:focus {
+    opacity: .70;
+    color: white;
+}
+
+/*----------------------------------------------------------------
+    CSS INTRO END
+*/
+
+/*----------------------------------------------------------------
+    CSS SERVICE START
+*/
+
+.services_container {
+    height: 561px; 
 }
