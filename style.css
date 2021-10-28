@@ -924,8 +924,50 @@ body {
     CSS FOOTER START
 */
 
+.footer_map {
+    height: 450px;
+    background: url(/images/maps.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
 
+.footer_map::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #393F4799;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
 
+.footer_map:hover::after {
+    background: transparent;
+}
+
+.footer_info {
+    height: 160px;
+    background: #C8A35F;
+    padding-top: 60px;
+}
+
+.footer_deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer_deck a {
+    color: white; 
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer_deck a:hover, .footer_deck a:focus, .footer_deck a:active {
+    opacity: 1;
+}
 
 /*----------------------------------------------------------------
     CSS FOOTER END
