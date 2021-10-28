@@ -428,6 +428,14 @@ body {
     background-color: #2F343A;
 }
 
+/* timer of moz for links on hover/active/focus */
+
+.moz_timer {
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+
 /*----------------------------------------------------------------
     DOCUMENT CSS FINISH
 */
@@ -574,7 +582,7 @@ body {
     border: 1px solid #C8A35F;
     box-sizing: border-box;
     padding-top: 45px;
-    margin-bottom: 140px;
+    margin-bottom: 130px;
 }
 
 .intro_wrapper {
@@ -599,12 +607,15 @@ body {
 
 .mouse_link {
     display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 30px;
     margin: 0 auto;
 }
 
 .mouse_link:hover, .mouse_link:active, .mouse_link:focus {
     opacity: .70;
+    margin-top: -7px;
     color: white;
 }
 
@@ -634,7 +645,7 @@ body {
     margin: 0 auto;
     margin-top: -560px;
     height: 100%;
-    width: 421px;
+    width: 420px;
     z-index: 2;
     background-color: #2F343A;
 }
@@ -700,9 +711,6 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    -webkit-transition: all 0.2s ease-out;
 }
 
 .transition_more:hover, .transition_more:active, .transition_more:focus {
@@ -737,9 +745,6 @@ body {
     text-align: center;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    -webkit-transition: all 0.2s ease-out;
 }
 
 .transition_links a:focus, .transition_links a:hover, .transition_links a:active {
@@ -780,27 +785,29 @@ body {
     margin-bottom: 120px;
 }
 
-.service_catalog {
+.service_cards{
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
 }
 
 .service_card {
-    max-width: 276px;
-    max-height: 180px;
+    height: 180px;
     color:white;
     background: #393F47;
-    padding: 35px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .service_img-back{
     height: 70px;
     width: 70px;
-    background: green;
     display: flex;
     justify-content: center;
+    margin-bottom: 23px;
+    border-radius: 70px;
 }
 
 .service_text {
@@ -808,10 +815,118 @@ body {
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
+    text-align: center;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
+.service_card:hover, .service_card:focus, .service_card:active {
+    background: #C8A35F;
+}
+
 /*----------------------------------------------------------------
     CSS SERVICE END
+*/
+
+/*----------------------------------------------------------------
+    CSS ABOUT COMPANY START
+*/
+
+.about_co {
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.about_co_back-rectangle {
+    width: 420px;
+    height: 482px;
+    background: #393F47;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.about_co_field {
+    margin-top: -482px;
+    height: 482px;
+    display: flex;
+    align-items: center;
+}
+
+.about_co_board {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about_co_info {
+    width: 445px;
+}
+
+.about_co_text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.about_co_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+}
+
+.about_co_card-stats {
+    height: 160px;
+    width: 200px;
+    background: white;
+    color: #2F343A;
+    font-weight: normal;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_co_card-img {
+    height: 160px;
+    width: 200px;
+}
+
+.stats_number {
+
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.stats_measure {
+
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+}
+
+.stats_sub {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+
+
+/*----------------------------------------------------------------
+    CSS ABOUT COMPANY END
+*/
+
+/*----------------------------------------------------------------
+    CSS FOOTER START
+*/
+
+
+
+
+/*----------------------------------------------------------------
+    CSS FOOTER END
 */
