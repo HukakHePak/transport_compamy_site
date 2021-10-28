@@ -775,8 +775,41 @@ body {
     CSS SERVICE START
 */
 
-.services_container {
+.service_container {
     height: 561px; 
+    margin-bottom: 120px;
+}
+
+.service_catalog {
+    display: grid;
+}
+
+.service_card {
+    max-width: 276px;
+    max-height: 180px;
+    color:white;
+    background: #393F47;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service_img-back{
+    height: 70px;
+    width: 70px;
+    background: green;
+    display: flex;
+    justify-content: center;
+}
+
+.service_text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 /*----------------------------------------------------------------
