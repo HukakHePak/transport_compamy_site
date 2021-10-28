@@ -428,6 +428,14 @@ body {
     background-color: #2F343A;
 }
 
+/* timer of moz for links on hover/active/focus */
+
+.moz_timer {
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+
 /*----------------------------------------------------------------
     DOCUMENT CSS FINISH
 */
@@ -443,6 +451,7 @@ body {
     left: 0;
     width: 100%;
     background: inherit;
+    z-index: 1;
 }
 
 .header a {
@@ -515,6 +524,10 @@ body {
     letter-spacing: 0.05em; 
 }
 
+.header_office_link:active, .header_office_link:hover, .header_office_link:focus {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .language_nav {
     font-size: 12px;
     line-height: 12px;
@@ -569,7 +582,7 @@ body {
     border: 1px solid #C8A35F;
     box-sizing: border-box;
     padding-top: 45px;
-    margin-bottom: 140px;
+    margin-bottom: 130px;
 }
 
 .intro_wrapper {
@@ -594,12 +607,15 @@ body {
 
 .mouse_link {
     display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 30px;
     margin: 0 auto;
 }
 
 .mouse_link:hover, .mouse_link:active, .mouse_link:focus {
     opacity: .70;
+    margin-top: -7px;
     color: white;
 }
 
@@ -607,10 +623,352 @@ body {
     CSS INTRO END
 */
 
+
+/*----------------------------------------------------------------
+    CSS TRANSITIONS START
+*/
+
+.transitions {
+    height: 560px;
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.transitions_background {
+
+    background: #393F47;
+    height: 100%;
+    z-index: 3;
+}
+
+.transition_back-rectangle {
+    margin: 0 auto;
+    margin-top: -560px;
+    height: 100%;
+    width: 420px;
+    z-index: 2;
+    background-color: #2F343A;
+}
+
+.transition_field {
+    margin-top: -560px;
+    height: 560px;
+    z-index: 1;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.transition_board {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.transition_info {
+    width: 445px;
+}
+
+.transition_h2{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.transition_h2::before {
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 6px;
+    background: #C8A35F;
+    margin-bottom: 40px;
+    ;
+}
+
+.transition_text {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 50px;
+}
+
+.transition_more {
+    display: block;
+    width: 220px;
+    height: 55px;
+    background: #C8A35F;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 16px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
+.transition_more:hover, .transition_more:active, .transition_more:focus {
+    background:  #dfb66a;
+    box-shadow: 0 0 15px rgb(39, 39, 39);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -o-transform: scale(1.07);
+}
+
+.transition_pic-down {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.transition_links {
+    height: 276px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;  
+}
+
+.transition_links a{
+    width: 160px;
+    text-decoration: none;
+    color: #C8A35F;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.transition_links a:focus, .transition_links a:hover, .transition_links a:active {
+    color: #f2c879;
+}
+
+.transition_next {
+    background: url(/images/right-arrow-ico.svg) no-repeat 95%;
+    padding-right: 96px;
+}
+
+.transition_next:hover, .transition_next:focus, .transition_next:active {
+    background: url(/images/right-arrow-ico.svg) no-repeat right;
+}
+
+.transition_before {
+    background: url(/images/left-arrow-ico.svg) no-repeat 5%;
+    padding-left: 96px;  
+}
+
+.transition_before:hover, .transition_before:active, .transition_before:focus {
+    background: url(/images/left-arrow-ico.svg) no-repeat left;
+}
+
+
+/*----------------------------------------------------------------
+    CSS TRANSITIONS END
+*/
+
+
+
 /*----------------------------------------------------------------
     CSS SERVICE START
 */
 
-.services_container {
+.service_container {
     height: 561px; 
+    margin-bottom: 120px;
 }
+
+.service_cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+.service_card {
+    height: 180px;
+    color:white;
+    background: #393F47;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service_img-back{
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 23px;
+    border-radius: 70px;
+}
+
+.service_text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.service_card:hover, .service_card:focus, .service_card:active {
+    background: #C8A35F;
+}
+
+/*----------------------------------------------------------------
+    CSS SERVICE END
+*/
+
+/*----------------------------------------------------------------
+    CSS ABOUT COMPANY START
+*/
+
+.about_co {
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.about_co_back-rectangle {
+    width: 420px;
+    height: 482px;
+    background: #393F47;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.about_co_field {
+    margin-top: -482px;
+    height: 482px;
+    display: flex;
+    align-items: center;
+}
+
+.about_co_board {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about_co_info {
+    width: 445px;
+}
+
+.about_co_text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.about_co_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+}
+
+.about_co_card-stats {
+    height: 160px;
+    width: 200px;
+    background: white;
+    color: #2F343A;
+    font-weight: normal;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_co_card-img {
+    height: 160px;
+    width: 200px;
+}
+
+.stats_number {
+
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 75px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.stats_measure {
+
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+}
+
+.stats_sub {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+
+
+/*----------------------------------------------------------------
+    CSS ABOUT COMPANY END
+*/
+
+/*----------------------------------------------------------------
+    CSS FOOTER START
+*/
+
+.footer_map {
+    height: 450px;
+    background: url(/images/maps.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.footer_map::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #393F4799;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+
+.footer_map:hover::after {
+    background: transparent;
+}
+
+.footer_info {
+    height: 160px;
+    background: #C8A35F;
+    padding-top: 60px;
+}
+
+.footer_deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer_deck a {
+    color: white; 
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer_deck a:hover, .footer_deck a:focus, .footer_deck a:active {
+    opacity: 1;
+}
+
+/*----------------------------------------------------------------
+    CSS FOOTER END
+*/
