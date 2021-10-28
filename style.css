@@ -516,6 +516,10 @@ body {
     letter-spacing: 0.05em; 
 }
 
+.header_office_link:active, .header_office_link:hover, .header_office_link:focus {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 .language_nav {
     font-size: 12px;
     line-height: 12px;
@@ -616,6 +620,7 @@ body {
 .transitions {
     height: 560px;
     position: relative;
+    margin-bottom: 120px;
 }
 
 .transitions_background {
@@ -701,6 +706,7 @@ body {
 }
 
 .transition_more:hover, .transition_more:active, .transition_more:focus {
+    background:  #dfb66a;
     box-shadow: 0 0 15px rgb(39, 39, 39);
     -webkit-transform: scale(1.07);
     -moz-transform: scale(1.07);
@@ -714,13 +720,48 @@ body {
 }
 
 .transition_links {
+    height: 276px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
+    align-content: space-between;  
 }
 
-.transitions_next {
-    display: block;
+.transition_links a{
+    width: 160px;
+    text-decoration: none;
+    color: #C8A35F;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+
+.transition_links a:focus, .transition_links a:hover, .transition_links a:active {
+    color: #f2c879;
+}
+
+.transition_next {
+    background: url(/images/right-arrow-ico.svg) no-repeat 95%;
+    padding-right: 96px;
+}
+
+.transition_next:hover, .transition_next:focus, .transition_next:active {
+    background: url(/images/right-arrow-ico.svg) no-repeat right;
+}
+
+.transition_before {
+    background: url(/images/left-arrow-ico.svg) no-repeat 5%;
+    padding-left: 96px;  
+}
+
+.transition_before:hover, .transition_before:active, .transition_before:focus {
+    background: url(/images/left-arrow-ico.svg) no-repeat left;
 }
 
 
@@ -737,3 +778,7 @@ body {
 .services_container {
     height: 561px; 
 }
+
+/*----------------------------------------------------------------
+    CSS SERVICE END
+*/
