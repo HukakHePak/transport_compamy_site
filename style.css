@@ -516,7 +516,7 @@ body {
 }
 
 .header_office_link {
-    background: url(/images/location-point.svg) no-repeat left;
+    background: url(./images/location-point.svg) no-repeat left;
     height: 25px;
     padding-top: 5px;  
     padding-left: 35px;
@@ -570,7 +570,7 @@ body {
 .intro {
     margin-top: 145px;
     min-height: 620px;
-    background: url("/images/truck.png") no-repeat center;
+    background: url("./images/truck.png") no-repeat center;
     background-size: cover;
     padding-top: 155px;
 }
@@ -752,21 +752,21 @@ body {
 }
 
 .transition_next {
-    background: url(/images/right-arrow-ico.svg) no-repeat 95%;
+    background: url(./images/right-arrow-ico.svg) no-repeat 95%;
     padding-right: 96px;
 }
 
 .transition_next:hover, .transition_next:focus, .transition_next:active {
-    background: url(/images/right-arrow-ico.svg) no-repeat right;
+    background: url(./images/right-arrow-ico.svg) no-repeat right;
 }
 
 .transition_before {
-    background: url(/images/left-arrow-ico.svg) no-repeat 5%;
+    background: url(./images/left-arrow-ico.svg) no-repeat 5%;
     padding-left: 96px;  
 }
 
 .transition_before:hover, .transition_before:active, .transition_before:focus {
-    background: url(/images/left-arrow-ico.svg) no-repeat left;
+    background: url(./images/left-arrow-ico.svg) no-repeat left;
 }
 
 
@@ -926,7 +926,7 @@ body {
 
 .footer_map {
     height: 450px;
-    background: url(/images/maps.png) no-repeat center;
+    background: url(./images/maps.png) no-repeat center;
     background-size: cover;
     position: relative;
 }
@@ -967,6 +967,12 @@ body {
 
 .footer_deck a:hover, .footer_deck a:focus, .footer_deck a:active {
     opacity: 1;
+}
+
+.footer_numbers, .footer_author {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 /*----------------------------------------------------------------
