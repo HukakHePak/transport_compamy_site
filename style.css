@@ -403,7 +403,7 @@ textarea {
     font-weight: 700;
     src: local(''),
          url('./fonts/roboto-v29-latin_cyrillic-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('./fonts/roboto-v29-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('g./fonts/roboto-v29-latin_cyrillic-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
   
@@ -569,26 +569,29 @@ body {
 
 .intro {
     margin-top: 145px;
-    min-height: 620px;
+    height: 620px;
     background: url("./images/truck.png") no-repeat center;
     background-size: cover;
-    padding-top: 155px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .intro_block {
     margin: 0 auto;
-    max-width: 920px;
-    height: 245px;
-    border: 1px solid #C8A35F;
-    box-sizing: border-box;
-    padding-top: 45px;
-    margin-bottom: 130px;
+    border: 1px solid #C8A35F;   
+    padding: 0 30px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro_wrapper {
-    width: 777px;
+    max-width: 920px;
     margin: 0 auto;
-    text-align: center;
+    padding: 0 20px;
 }
 
 .intro_h1 { 
@@ -596,26 +599,35 @@ body {
     font-size: 64px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    height: 59px;
-    margin-bottom: 45px;
+    margin: 45px 0;
 }
 
 .intro_text {
+    max-width: 777px;
     font-size: 18px;
     line-height: 28px;
+    margin-bottom: 45px;
+}
+
+.intro_mouse {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
 }
 
 .mouse_link {
+    margin: 0 auto;
+    bottom: 0;
     display: block;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 30px;
-    margin: 0 auto;
 }
 
 .mouse_link:hover, .mouse_link:active, .mouse_link:focus {
+    position: relative;
     opacity: .70;
-    margin-top: -7px;
+    padding-bottom: 17px;
     color: white;
 }
 
@@ -629,22 +641,14 @@ body {
 */
 
 .transitions {
-    height: 560px;
-    position: relative;
     margin-bottom: 120px;
-}
-
-.transitions_background {
-
+    height: 560px;
     background: #393F47;
-    height: 100%;
-    z-index: 3;
 }
 
 .transition_back-rectangle {
     margin: 0 auto;
-    margin-top: -560px;
-    height: 100%;
+    height: 560px;
     width: 420px;
     z-index: 2;
     background-color: #2F343A;
@@ -654,19 +658,13 @@ body {
     margin-top: -560px;
     height: 560px;
     z-index: 1;
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-
-.transition_board {
-    width: 100%;
+    padding: 120px 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .transition_info {
-    width: 445px;
+    max-width: 400px;
 }
 
 .transition_h2{
@@ -721,9 +719,12 @@ body {
     -o-transform: scale(1.07);
 }
 
+.transition_more-second {
+    display: none;
+}
+
 .transition_pic-down {
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-end;
 }
 
@@ -781,7 +782,7 @@ body {
 */
 
 .service_container {
-    height: 561px; 
+    height: auto; 
     margin-bottom: 120px;
 }
 
@@ -792,7 +793,8 @@ body {
 }
 
 .service_card {
-    height: 180px;
+    min-height: 180px;
+    padding: 10px 20px;
     color:white;
     background: #393F47;
     display: flex;
@@ -835,6 +837,7 @@ body {
 .about_co {
     position: relative;
     margin-bottom: 120px;
+    height: max-content;
 }
 
 .about_co_back-rectangle {
@@ -849,18 +852,21 @@ body {
     margin-top: -482px;
     height: 482px;
     display: flex;
-    align-items: center;
+    z-index: 1;
 }
 
 .about_co_board {
     width: 100%;
+    margin: auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    align-self: center;
 }
 
 .about_co_info {
-    width: 445px;
+    max-width: 445px;
+    margin-right: 60px;
 }
 
 .about_co_text {
@@ -876,8 +882,10 @@ body {
 }
 
 .about_co_card-stats {
-    height: 160px;
-    width: 200px;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    min-height: 160px;
     background: white;
     color: #2F343A;
     font-weight: normal;
@@ -889,12 +897,14 @@ body {
 }
 
 .about_co_card-img {
-    height: 160px;
-    width: 200px;
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    min-height: 160px;
 }
 
 .stats_number {
-
     font-weight: bold;
     font-size: 64px;
     line-height: 75px;
@@ -913,8 +923,6 @@ body {
     font-size: 12px;
     line-height: 14px;
 }
-
-
 
 /*----------------------------------------------------------------
     CSS ABOUT COMPANY END
@@ -947,7 +955,7 @@ body {
 }
 
 .footer_info {
-    height: 160px;
+    height: fit-content;
     background: #C8A35F;
     padding-top: 60px;
 }
@@ -956,7 +964,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
 }
 
 .footer_deck a {
@@ -975,6 +984,280 @@ body {
     line-height: 16px;
 }
 
+.footer_element_margin {
+    margin-bottom: 40px;
+}
+
 /*----------------------------------------------------------------
     CSS FOOTER END
+*/
+
+/*----------------------------------------------------------------
+    CSS 1128 MEDIA START
+*/
+
+@media screen and (max-width :1128px) {
+    .wrapper {
+        padding: 0 20px;
+    }       
+   
+    .stats_number {
+        font-size: 48px;
+    }
+
+}
+
+/*----------------------------------------------------------------
+    CSS 1128 MEDIA END
+*/
+
+/*----------------------------------------------------------------
+    CSS 1024 MEDIA START
+*/
+
+@media screen and (max-width :1023px) {
+
+    .transition_links {
+        display: none;
+    }
+
+    .wrapper {
+        padding: 0 40px;
+    }
+
+    .about_co_back-rectangle {
+        height: 600px;
+    }
+
+    .about_co_field {
+        margin-top: -600px;
+        height: 600px;
+    }
+
+    .about_co_cards {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+
+    .intro_h1 {
+        font-size: 50px;
+    }
+
+    .about_co_info {
+        max-width: 350px;
+    }
+
+    .stats_measure {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 35px;
+    }
+    
+    .stats_sub {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .about_co_text {
+        font-size: 18px;
+    }
+
+    .footer_numbers {
+        order: 2;
+    }
+
+    .footer_contacts {
+        order: 3;
+        width: 50%;
+        text-align: right;
+    }
+
+    .footer_author {
+        order: 4;
+        width: 100%;
+        text-align: right;
+    }
+
+    .footer_map {
+        height: 350px;
+    }
+}
+
+/*----------------------------------------------------------------
+    CSS 1024 MEDIA END
+*/
+
+/*----------------------------------------------------------------
+    CSS 876 MEDIA START
+*/
+
+@media screen and (max-width: 866px) {
+    
+    .service_card {
+        grid-column: span 2;
+    }
+
+    .service_container {
+        height: auto;
+    }
+
+    .wrapper {
+        padding: 0 20px;
+    }
+
+    .transition_h2 {
+        font-size: 30px;
+    }
+
+    .transition_h2::before {
+        margin-bottom: 15px;
+    }
+  
+    .transition_pic-down {
+        align-items: center;
+    }
+
+    .transition_image {
+        width: 370px;
+    }
+    
+}
+
+/*----------------------------------------------------------------
+    CSS 876 MEDIA END
+*/
+
+/*----------------------------------------------------------------
+    CSS 768 MEDIA START
+*/
+
+@media screen and (max-width: 767px) {
+ 
+    .intro {
+        height: 520px;
+    }
+
+    .transitions {
+        height: max-content;
+        margin-bottom: 90px;
+    }
+
+    .transition_field {
+        margin: 0;
+        height: max-content;
+        padding: 90px 0;
+        display: block;
+    }
+
+    .transition_back-rectangle {
+        display: none;
+    }
+
+    .transition_info {
+        max-width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .transition_pic-down {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .transition_pic-block {
+        text-align: center;
+    }
+
+    .transition_image {
+        width: 90%;
+        margin-bottom: 40px;
+    }
+
+    .transition_more{
+        font-size: 28px;
+        padding-top: 0;
+        line-height: 90px;
+        height: max-content;
+    }
+
+    .transition_more-first {
+        display: none;
+    }
+
+    .transition_more-second {
+        display: block;
+        width: 80%;
+    }
+
+    .service_container {
+        margin-bottom: 90px;
+    }
+
+    .about_co {
+        background:#393F47;
+        margin-bottom: 90px;
+    }
+    
+    .about_co_back-rectangle {
+        display: none;
+    }
+
+    .about_co_field {
+        margin: 0;
+        height: fit-content;
+    }
+
+    .about_co_board {
+        display: block;
+        padding: 90px 0;
+    }
+
+    .about_co_info {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 90px;
+    }
+    
+    .about_co_cards {
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    .footer_deck {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: flex-start;
+        width: min-content;
+    }
+
+    .footer_contacts, .footer_author {
+        text-align: left;
+        width: auto;
+    }
+
+}
+
+
+/*----------------------------------------------------------------
+    CSS 768 MEDIA END
+*/
+
+/*----------------------------------------------------------------
+    CSS 500 MEDIA START
+*/
+
+
+@media screen and (max-width: 500px) {
+
+
+
+
+
+
+
+
+
+}
+
+/*----------------------------------------------------------------
+    CSS 500 MEDIA END
 */
