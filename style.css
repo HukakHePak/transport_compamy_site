@@ -728,6 +728,10 @@ body {
     align-items: flex-end;
 }
 
+.transition_image {
+    width: 90%;
+}
+
 .transition_links {
     height: 276px;
     display: flex;
@@ -883,9 +887,8 @@ body {
 
 .about_co_card-stats {
     width: 100%;
-    height: 100%;
+    height: 160px;
     max-width: 200px;
-    min-height: 160px;
     background: white;
     color: #2F343A;
     font-weight: normal;
@@ -899,9 +902,8 @@ body {
 .about_co_card-img {
     object-fit:cover;
     width: 100%;
-    height: 100%;
+    height: 160px;
     max-width: 200px;
-    min-height: 160px;
 }
 
 .stats_number {
@@ -1222,16 +1224,14 @@ body {
         width: fit-content;
     }
 
-    .footer_deck {
-        margin: 0 auto;
-        flex-direction: column;
-        align-items: flex-start;
-        width: min-content;
-    }
-
-    .footer_contacts, .footer_author {
+    .footer_contacts {
         text-align: left;
-        width: auto;
+        width: 50%;
+    }
+    
+    .footer_author, .footer_numbers{
+        width: 50%;
+        text-align: right;  
     }
 
 }
@@ -1248,16 +1248,92 @@ body {
 
 @media screen and (max-width: 500px) {
 
+    .intro {
+        height: 400px;
+    }
+
+    .intro_wrapper {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .intro_block {
+        display: block;
+        border-left: 0;
+        border-right: 0;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    .intro_h1 {
+        font-size: 34px;
+    }
+
+    .intro_text {
+        display: none;
+    }
 
 
 
+    .service_cards {
+        margin: 0 auto;
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+        gap: 10px;
+    }
 
+    .about_co_cards {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+        gap: 10px;
+    }
 
+    .about_co_card-stats {
+        max-width: 100%;
 
+    }
 
+    .about_co_card-img {
+        max-width: 100%;
+
+    }
+
+    .footer_deck {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+    }
+
+    .footer_contacts, .footer_author, .footer_numbers {
+        text-align: left;
+        width: auto;
+    }
 
 }
 
 /*----------------------------------------------------------------
     CSS 500 MEDIA END
+*/
+
+/*----------------------------------------------------------------
+    CSS 350 MEDIA START
+*/
+
+
+@media screen and (max-width: 350px) {
+
+    .header_phone, .header_mail {
+        display: none;
+    }
+
+    .info_wrapper {
+        justify-content: center;
+    }
+
+}
+
+/*----------------------------------------------------------------
+    CSS 350 MEDIA END
 */
