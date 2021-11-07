@@ -426,6 +426,7 @@ body {
     line-height: 1.2;
     color: white;
     background-color: #2F343A;
+    height: 100vh;
 }
 
 /* timer of moz for links on hover/active/focus */
@@ -569,13 +570,22 @@ body {
     opacity: 1;
 }
 
+.header_menu {
+    display: none;
+    height: 46px;
+    width: 46px;
+    background: url(./images/menu-ico.svg) no-repeat center;
+    background-size: cover;
+}
+
 /*----------------------------------------------------------------
     CSS HEADER FINISH
 */
 
 .main {
     position: relative;
-    top: 145px
+    top: 145px;
+    
 }
 
 
@@ -854,7 +864,7 @@ body {
 */
 
 .about_co {
-    position: relative;
+   
     margin-bottom: 120px;
     height: max-content;
 }
@@ -949,6 +959,11 @@ body {
     CSS FOOTER START
 */
 
+.footer {
+    position: relative;
+    top: 145px;
+}
+
 .footer_map {
     height: 450px;
     background: url(./images/maps.png) no-repeat center;
@@ -1034,12 +1049,21 @@ body {
 
 @media screen and (max-width :1023px) {
 
-    .transition_links {
+    .wrapper {
+        padding: 0 40px;
+    }
+
+    .header_logo_link {
+        border: 0;
+        padding: 0;
+    }
+
+    .header_office_link {
         display: none;
     }
 
-    .wrapper {
-        padding: 0 40px;
+    .transition_links {
+        display: none;
     }
 
     .about_co_back-rectangle {
@@ -1108,6 +1132,53 @@ body {
 */
 
 @media screen and (max-width: 866px) {
+
+    .header_menu {
+        display: block;
+    }
+
+    .header_nav {   
+        z-index: 1;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background:rgba(0, 0, 0, 0.705);
+        display: none;
+    }
+
+    .header_nav-active {
+        display: flex;
+    }
+
+    .header_list {
+        position: relative;
+        margin: auto;
+        height: 70%;
+        max-height: 800px;
+        width: 70%;
+        font-size: 30px;
+        background:#2F343A;
+        padding: 5% 0;
+        padding-left: 10%;
+        align-items: center;
+    }
+
+    .header_list-exit {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        top: 20px;
+        right: 20px;
+        background: url(./images/exit-ico.svg) no-repeat;
+        background-size: cover;
+    }
+
+    .header_item {
+        width: 100%;
+        margin: 0;
+    }
     
     .service_card {
         grid-column: span 2;
@@ -1211,7 +1282,7 @@ body {
 
     .about_co {
         background:#393F47;
-        margin-bottom: 90px;
+        margin-bottom: 0;
     }
     
     .about_co_back-rectangle {
@@ -1263,6 +1334,13 @@ body {
 
 @media screen and (max-width: 500px) {
 
+    .header_list {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        max-height: none;
+    }
+
     .intro {
         height: 400px;
     }
@@ -1288,8 +1366,6 @@ body {
     .intro_text {
         display: none;
     }
-
-
 
     .service_cards {
         margin: 0 auto;
