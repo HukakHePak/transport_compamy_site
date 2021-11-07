@@ -446,7 +446,7 @@ body {
 */
 
 .header{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -489,6 +489,16 @@ body {
 
 .header_company {
     padding: 27px;
+    width: 100%;
+    z-index: 1;
+    background-color: #2F343A;
+    transition: .2s;
+}
+
+.header_company_active {
+    position: fixed;
+    top: 0;
+    padding: 15px;
 }
 
 .header_list, .language_list {
@@ -563,12 +573,17 @@ body {
     CSS HEADER FINISH
 */
 
+.main {
+    position: relative;
+    top: 145px
+}
+
+
 /*----------------------------------------------------------------
     CSS INTRO START
 */
 
 .intro {
-    margin-top: 145px;
     height: 620px;
     background: url("./images/truck.png") no-repeat center;
     background-size: cover;
