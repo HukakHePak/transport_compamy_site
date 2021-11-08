@@ -1178,7 +1178,7 @@ body {
     }
 
     .about_co_cards {
-        -ms-grid-columns: (1fr)[2];
+        -ms-grid-columns: 1fr 1px 1fr;
         grid-template-columns: repeat(2, 1fr);
     } 
 
