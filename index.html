@@ -8,7 +8,7 @@
     <title>Перевозка крупногабаритных грузов по России и Европе</title>
 </head>
 <body>
-    <header class="header">
+    <header id="start" class="header">
         <div class="header_info">
             <div class="wrapper">
                 <div class="info_wrapper">
@@ -42,13 +42,13 @@
                             Наши офисы
                         </a>
                     </div>
-                    <nav class="header_nav header_nav-active">
+                    <nav class="header_nav">
                         <ul class="header_list">
                             <li class="header_item">
-                                <a href="#1" class="header_link">Услуги</a>
+                                <a href="#service" class="header_link js-scroll">Услуги</a>
                             </li>
                             <li class="header_item">
-                                <a href="#1" class="header_link">О компании</a>
+                                <a href="#about" class="header_link js-scroll">О компании</a>
                             </li>
                             <li class="header_item">
                                 <a href="#1" class="header_link">Вакансии</a>
@@ -56,7 +56,9 @@
                             <li class="header_item">
                                 <a href="#1" class="header_link">Контакты</a>
                             </li>
-                            <a class="header_list-exit"></a>
+                            <li>
+                                <a class="header_list-exit"></a>
+                            </li>
                         </ul>                 
                     </nav>
                     <a class="header_menu"></a>
@@ -111,7 +113,7 @@
             </div>
         </div>
         <!-------------SERVICES-------------->
-        <div class="service_container">
+        <div id="service" class="service_container">
             <div class="wrapper">
                 <div class="service_title">
                     <h2 class="service_h2 transition_h2">
@@ -187,7 +189,7 @@
             </div>           
         </div>
         <!---------------ABOUT COMPANY -------------->
-        <div class="about_co">
+        <div id="about" class="about_co">
             <div class="about_co_back-rectangle"></div>
             <div class="wrapper">
                 <div class="about_co_field">
@@ -225,16 +227,16 @@
         </div>
     </main>
     <footer class="footer">
-        <div class="footer_map"></div>
+        <a href="https://yandex.ru/MaPS/-/CCUuUDrIpD" class="footer_map"></a>
         <div class="footer_info">
             <div class="wrapper">
                 <div class="footer_deck">
-                    <a href="#1" class="footer_logo-link footer_element_margin">
+                    <a href="#start" class="footer_logo-link footer_element_margin js-scroll">
                         <img src="./images/dark-logo.svg" alt="COMPANY Tagline Goes Here" class="header_logo_pic">
                     </a>
                     <ul class="footer_contacts footer_element_margin">
                         <li class="footer_adress">
-                            <a href="#1" class="footer_adress">123456, Санкт-Петербург, Невский пр-кт 127</a>
+                            <a href="https://yandex.ru/MaPS/-/CCUuUDrIpD" target="_blank" class="footer_adress">123456, Санкт-Петербург, Невский пр-кт 127</a>
                         </li>  
                         <li class="footer_mail">
                             <a href="#1" class="header_mail">sales@log.ru</a> 
@@ -248,7 +250,7 @@
                             <a href="#1" class="footer_number-link">+7 (812) 355-56-65</a>
                         </li>
                     </ul>
-                    <a href="#1" class="footer_author footer_element_margin">Разработано - D-E-N.ru</a>
+                    <a href="https://d-e-n.ru/" target="_blank" class="footer_author footer_element_margin">Разработано - D-E-N.ru</a>
                 </div>
             </div>
         </div>

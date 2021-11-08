@@ -965,6 +965,7 @@ body {
 }
 
 .footer_map {
+    display: block;
     height: 450px;
     background: url(./images/maps.png) no-repeat center;
     background-size: cover;
@@ -1137,7 +1138,9 @@ body {
         display: block;
     }
 
-    .header_nav {   
+    .header_nav { 
+        visibility: hidden;
+        opacity: 0;  
         z-index: 1;
         position: fixed;
         width: 100%;
@@ -1145,11 +1148,13 @@ body {
         top: 0;
         left: 0;
         background:rgba(0, 0, 0, 0.705);
-        display: none;
+        transition: .2s all linear;
+        display: flex;
     }
 
     .header_nav-active {
-        display: flex;
+        visibility: visible;
+        opacity: 1;
     }
 
     .header_list {
